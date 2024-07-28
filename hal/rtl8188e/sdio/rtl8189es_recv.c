@@ -125,7 +125,7 @@ s32 rtl8188es_init_recv_priv(PADAPTER padapter)
 	/* 3 2. init tasklet */
 #ifdef PLATFORM_LINUX
 	tasklet_init(&precvpriv->recv_tasklet,
-		     (void(*)(unsigned long))rtl8188es_recv_tasklet,
+		     (void *)rtl8188es_recv_tasklet,
 		     (unsigned long)padapter);
 #endif
 
